@@ -1,6 +1,10 @@
 <script setup>
 import { ref, reactive } from "vue";
 
+const divider = ref(
+  "_______________________________________________________________________"
+);
+
 const clicks = ref(0);
 
 function incrementClicks() {
@@ -12,6 +16,8 @@ const person = reactive({ firstName: "", country: "" });
 function changeCountry(newCountry) {
   person.country = newCountry;
 }
+
+// Divider
 
 const tasks = ref([
   { name: "Boodschappen doen", completed: false },
@@ -26,9 +32,11 @@ function completedness(done) {
 function toggleCompletion(task) {
   task.completed = !task.completed;
 }
+
+// Divider
 </script>
 
-<template>
+<template v-html="rawHtml">
   <button @click="incrementClicks">
     Hoe vaak heb je hier geklikt: {{ clicks }}
   </button>
@@ -43,12 +51,16 @@ function toggleCompletion(task) {
 
   <input v-model.trim="person.firstName" type="text" />
 
+  <div>{{ divider }}</div>
+
   <ul>
     <li v-for="task in tasks" :key="task.id">
       {{ task.name }} : {{ completedness(task.completed) }} :
       <button @click="toggleCompletion(task)">wissel</button>
     </li>
   </ul>
+
+  <div>{{ divider }}</div>
 </template>
 
 <style scoped></style>
