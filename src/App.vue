@@ -34,6 +34,14 @@ function toggleCompletion(task) {
 }
 
 // Divider
+
+const people = ref([
+  { name: "Jodocus", age: 39 },
+  { name: "Blorpus", age: 4528 },
+]);
+
+const newName = ref();
+const newAge = ref();
 </script>
 
 <template v-html="rawHtml">
@@ -61,6 +69,12 @@ function toggleCompletion(task) {
   </ul>
 
   <div>{{ divider }}</div>
+
+  <input v-model="newName" v-model.trim="newLine" type="text" />
+  <div>{{ newName }}</div>
+
+  <input v-model="newAge" v-model.trim="newLine" type="number" />
+  <div>{{ newAge }}</div>
 </template>
 
 <style scoped></style>
