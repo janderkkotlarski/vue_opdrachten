@@ -70,10 +70,10 @@ const newAge = ref();
 
   <div>{{ divider }}</div>
 
-  <input v-model="newName" v-model.trim="newLine" type="text" />
+  <input v-model.trim="newName" type="text" />
   <div>{{ newName }}</div>
 
-  <input v-model="newAge" v-model.trim="newLine" type="number" />
+  <input v-model="newAge" v-model.number="newAge" type="number" />
   <div>{{ newAge }}</div>
 </template>
 
