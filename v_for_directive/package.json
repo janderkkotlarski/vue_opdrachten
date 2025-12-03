@@ -1,5 +1,5 @@
 {
-  "name": "vue_opdrachten",
+  "name": "v_for_directive",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
-    "eslint-plugin-vue": "^10.5.1",
-    "typescript-eslint": "^8.47.0",
+    "eslint-plugin-vue": "^10.6.2",
+    "typescript-eslint": "^8.48.1",
     "vite": "^7.2.4"
   }
 }
