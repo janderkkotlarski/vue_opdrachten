@@ -1,9 +1,11 @@
 <script setup>
+import ChildComponent from './components/ChildComponent.vue';
+
+defineProps(['title']);
 </script>
 
 <template>
-huh
+    <ChildComponent />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
