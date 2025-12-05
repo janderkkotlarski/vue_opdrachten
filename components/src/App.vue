@@ -1,18 +1,10 @@
 <script setup>
-import {ref} from 'vue';
-import ChildComponent from './components/ChildComponent.vue';
-
-const message = ref('');
-
-const handleMessage = newMessage => {
-    message.value = newMessage;
-};
+// import {ref} from 'vue';
+import ParentComponent from './components/ParentComponent.vue';
 </script>
 
 <template>
-    <ChildComponent note="test?" @update-message="handleMessage" />
-
-    <p>Kindcomponent bericht: {{ message }}</p>
+    <ParentComponent />
 </template>
 
 <style scoped></style>

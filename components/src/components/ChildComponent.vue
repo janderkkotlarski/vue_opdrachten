@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['note']);
+defineProps(['message']);
 
 const emit = defineEmits(['updateMessage']);
 
@@ -9,7 +9,7 @@ const emitEvent = () => {
 </script>
 
 <template>
-    <div>{{ note }}</div>
+    <div>{{ message }}</div>
 
     <button @click="emitEvent">Pro-Beer</button>
 </template>

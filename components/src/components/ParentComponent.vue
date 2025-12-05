@@ -1,7 +1,16 @@
 <script setup>
-defineProps(['message']);
+import {ref} from 'vue';
+import ChildComponent from './ChildComponent.vue';
+
+const note = ref('');
+
+const handleMessage = newMessage => {
+    note.value = newMessage;
+};
 </script>
 
 <template>
-    <div>{{ message }}</div>
+    <ChildComponent message="test?" @update-message="handleMessage" />
+
+    <p>Kindcomponent bericht: {{ note }}</p>
 </template>
