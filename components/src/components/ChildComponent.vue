@@ -1,11 +1,15 @@
 <script setup>
-import {ref} from 'vue';
+defineProps(['note']);
 
-defineProps(['message']);
+const emit = defineEmits(['updateMessage']);
 
-const count = ref(0);
+const emitEvent = () => {
+    emit('updateMessage', 'Kindcomponent terugkoppeling');
+};
 </script>
 
 <template>
-    <button @click="++count">Clicked {{ count }} times!</button>
+    <div>{{ note }}</div>
+
+    <button @click="emitEvent">Pro-Beer</button>
 </template>
