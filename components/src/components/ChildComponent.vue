@@ -11,5 +11,5 @@ const emitEvent = () => {
 <template>
     <div>{{ message }}</div>
 
-    <button @click="emitEvent">Pro-Beer</button>
+    <button @click="emitEvent">Probeer</button>
 </template>
