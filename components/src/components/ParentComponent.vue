@@ -2,7 +2,7 @@
 import {ref} from 'vue';
 import ChildComponent from './ChildComponent.vue';
 
-const note = ref('test');
+const note = ref('Testwaarde');
 
 const handleMessage = newMessage => {
     note.value = newMessage;

@@ -1,15 +1,15 @@
 <script setup>
-import {defineProps, defineEmits} from 'vue';
+const message = defineModel();
 
-const props = defineProps(['title']);
-const emit = defineEmits(['update:title']);
-
-function updateTitle() {
-    emit('update:title', 'Updated Title');
-}
+const mathage = defineModel();
 </script>
 
 <template>
-    <h1>{{ props.title }}</h1>
-    <button @click="updateTitle">Update Title</button>
+    <div>
+        <input v-model="message" placeholder="Typ iets..." />
+    </div>
+
+    <div>
+        <input v-model="mathage" placeholder="Typ een getal" type="number" />
+    </div>
 </template>
